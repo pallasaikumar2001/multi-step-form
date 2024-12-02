@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Multi Form</title>
+    <script src="multiform.js"></script>
+</head>
+<body class="h-screen w-screen flex bg-[hsl(206,94%,87%)] justify-center items-center"> 
+    <div class="flex md:flex-row sm:h-fit flex-col md:w-fit  lg:flex-row md:p-4  text-center text-xl bg-white rounded-xl m-20  gap-2 sm:p-0"> 
+        <div class="relative">
+            <img src="bg-sidebar-desktop.svg" alt="Sidebar Desktop" class="hidden md:block w-full">
+            <img src="bg-sidebar-mobile.svg" alt="Sidebar Mobile" class="md:hidden w-full">
+        
+            <div class="flex md:flex-col gap-x-5 absolute z-10 top-0 text-white text-start p-7 gap-y-5 w-full justify-center">
+                <div class="flex items-center gap-x-5">
+                    <div class="number flex h-10 w-10 rounded-3xl justify-center items-center border border-[hsl(206,94%,87%)] bg-[hsl(206,94%,87%)] text-blue-950">
+                        1
+                    </div>
+                    <div class="hidden md:flex flex-col">
+                        <p class="text-sm">STEP 1</p>
+                        <h3 class="font-bold text-base">YOUR INFO</h3>
+                    </div>
+                </div>
+        
+                <div class="flex items-center gap-x-5">
+                    <div class="number flex h-10 w-10 rounded-3xl justify-center items-center border border-[hsl(206,94%,87%)]">
+                        2
+                    </div>
+                    <div class="hidden md:flex flex-col">
+                        <p class="text-sm">STEP 2</p>
+                        <h3 class="font-bold text-base">SELECT PLAN</h3>
+                    </div>
+                </div>
+        
+                <div class="flex items-center gap-x-5">
+                    <div class="number flex h-10 w-10 rounded-3xl justify-center items-center border border-[hsl(206,94%,87%)]">
+                        3
+                    </div>
+                    <div class="hidden md:flex flex-col">
+                        <p class="text-sm">STEP 3</p>
+                        <h3 class="font-bold text-base">ADD-ONS</h3>
+                    </div>
+                </div>
+        
+                <div class="flex items-center gap-x-5">
+                    <div class="number flex h-10 w-10 rounded-3xl justify-center items-center border border-[hsl(206,94%,87%)]">
+                        4
+                    </div>
+                    <div class="hidden md:flex flex-col">
+                        <p class="text-sm">STEP 4</p>
+                        <h3 class="font-bold text-base">SUMMARY</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+
+
+
+<!-- step-1  -->
+
+
+
+        <div class=" step 1 mt-[-20%] justify-center md: md:mt-0  relative pr-0 md:pr-[3rem] flex flex-col md:justify-start items-start pl-7 pt-7 ml-5 mr-5 text-start z-4 bg-white rounded-xl">
+            <h1 class="font-bold text-2xl">Personal Info</h1>
+            <p class="text-sm text-gray-500">Please provide your name, email address, and phone number</p>
+            <form action="" id="personal-info-form">
+                <h3 class="mt-5">Name</h3>
+                <input type="text" id="name" class="border-2 hover:border-purple-700 w-[90%] md:w-full mr-40 rounded-md p-2 " required placeholder="EX:-saikumar">
+                <h3 class="mt-5">Email Address</h3>
+                <input type="email" id="emailID" class="border-2 hover:border-purple-700 w-[90%] md:w-full rounded-md p-2" required placeholder="EX:-saiuppalur@gmail.com">
+                <h3 class="mt-5">Phone Number</h3>
+                <input type="text" id="Phone-number" class="border-2 hover:border-purple-700 w-[90%] md:w-full rounded-md p-2" required placeholder="ex:-9876543210">  
+                <div class="flex justify-between w-[100%] mt-[4rem] mb-7 md:mb-0 sm:mt-15 sm:pt-14 ">
+                    <button class="invisible prev text-gray-500 font-bold text-lg px-4 py-2 rounded-md cursor-pointer" id="prev-step">Go Back</button>
+
+                    <button class="next bg-blue-950 text-white px-4 py-2 rounded-md cursor-pointer" id="next-step" type="submit">Next Step</button>
+                </div>  
+            </form>    
+        </div>
+         
+            
+
+
+<!-- Step 2 -->
+
+
+        
+        <div class="step 2 mt-[-20%] md:mt-0 m-[1rem] bg-white flex-col hidden md:w-fit md:ml-[2.7rem] md:mr-[3.8rem] text-start my-5 gap-y-4  md:flex-row z-40 pt-7 px-[6rem] md:px-0 rounded-lg" id="step-2">
+            <h1 class="font-bold items-start text-2xl">Select your plan</h1>
+            <p class="text-sm text-gray-500">You have the option of monthly or yearly billing</p>
+            <div id="plans" class="flex justify-between gap-4 pt-3 md:flex-row md:px-[2rem] flex-col md:w-[150%] md:pr-[3rem] w-full md:justify-start">
+                <div id="plan1" class="plan items-start hover:border-purple-700 relative text-sm flex-row md:flex-col md:w-[7rem] sm:items-center md:items-start gap-x-5 md:gap-x-0 md:p0 cursor-pointer border-[2px] border-gray-300 flex rounded-lg  pl-3 lg:justify-evenly">
+                    <img src="icon-arcade.svg" alt="Arcade Plan" class="pb-5">
+                    <div class="price">
+                        <h3 class="name font-bold">Arcade</h3>
+                        <p class="package text-gray-500">$9/mo</p>
+                        <p class="free text-blue-950 hidden">2 months free</p>
+                    </div>
+                </div>
+            
+                <div id="plan2" class="plan items-start hover:border-purple-700 relative text-sm flex-row md:flex-col md:w-[7rem] md:items-start sm:items-center sm:w-auto sm:h-fit sm:p-4  cursor-pointer border-[2px]  border-gray-300 flex  rounded-lg  pl-3 lg:justify-evenly">
+                    <img src="icon-advanced.svg" alt="Advanced Plan" class="pb-5">
+                    <div class="price">
+                        <h3 class="name font-bold">Advanced</h3>
+                        <p class="package text-gray-500">$12/mo</p>
+                        <p class="free text-blue-950 hidden">2 months free</p>
+                    </div>
+                </div>
+            
+                <div id="plan3" class="plan items-start hover:border-purple-700 relative md:mr-[25%] text-sm flex-row md:flex-col md:w-[7rem] md:items-start sm:items-center sm:w-auto sm:h-fit sm:p-4  cursor-pointer border-[2px]  border-gray-300 flex rounded-lg  pl-3 lg:justify-evenly">
+                    <img src="icon-pro.svg" alt="Pro Plan" class="pb-5">
+                    <div class="price">
+                        <h3 class="name font-bold">Pro</h3>
+                        <p class="package price text-gray-500">$15/mo</p>
+                        <p class="free text-blue-950 hidden">2 months free</p>
+                    </div>
+                </div>
+            </div>           
+        
+            <div class="flex justify-center gap-x-5 mt-10">
+                <div class="toggle-label-text">Monthly</div>
+                <div class="flex items-center toggle-switch h-7 w-14 rounded-2xl bg-blue-900 relative">
+                    <div id="togBall" class="flex h-5 w-5 bg-white translate-x-1 rounded-3xl transition-transform duration-300"></div>
+                    <input type="checkbox" id="toggle" class="toggle-input opacity-0 cursor-pointer absolute inset-0 z-10">
+                </div>
+                <div class="toggle-label-text">Annually</div>
+            </div>
+        
+            <div class="flex-grow"></div>
+            <div class="flex justify-between md:mt-[12rem] mt-10">
+                <button class="prev text-gray-500 font-bold text-lg px-4 py-2 rounded-md cursor-pointer" id="prev-step">Go Back</button>
+                <button class="next bg-blue-950 text-white px-4 py-2 rounded-md cursor-pointer" id="next-step">Next Step</button>
+            </div>
+          </div>
+
+
+
+
+
+    <!-- step-3 -->
+
+
+
+        <div class="step 3 step-3 mt-[-20%] relative hidden flex-col m-6 px-[4rem] md:px-0  text-start md:pl-[3rem] md:mt-[0] sm:z-40 bg-white pt-7 md:pr-10 rounded-lg">
+            <h1 class="font-bold items-start text-2xl">Pick add-ons</h1>
+            <p class="text-sm text-gray-500">Add-ons help enhance your gaming experience</p>
+            <div class="flex flex-col gap-y-2 ">
+                <div class="flex gap-x-5 sm:gap-x-3 justify-between text-start mt-7 w-100 hover:border-purple-700 border-[2px] p-3 rounded-md">
+                    <div class="flex justify-around ">
+                        <input type="checkbox">
+                        <div class="pl-10 sm:pl-4 md:pr-[7rem]">
+                            <h3 class="text-start font-bold text-[85%]">Online service</h3>
+                            <p class="text-sm text-gray-500">Access to multiplayer games</p>
+                        </div>
+                    </div>
+                    <p class=" addoncost flex text-blue-700 text-base items-center">+$1/mo</p>
+                </div>
+                <div class="flex gap-x-5 sm:gap-x-3 justify-between text-start pr-7 w-100 hover:border-purple-700 border-[2px] p-3 rounded-md">
+                    <div class="flex justify-around sm:justify-evenly">
+                        <input type="checkbox">
+                        <div class="pl-10 sm:pl-4">
+                            <h3 class="text-start font-bold text-[85%]">Large storage</h3>
+                            <p class="text-sm text-gray-500">Extra 1TB of cloud save</p>
+                        </div>
+                    </div>
+                    <p class=" addoncost flex text-blue-700 text-base items-center">+$2/mo</p>
+                </div>
+                <div class="flex gap-x-5 sm:gap-x-3 justify-between text-start pr-7 w-100 hover:border-purple-700 border-[2px] p-3 rounded-md">
+                    <div class="flex justify-around ">
+                        <input type="checkbox">
+                        <div class="pl-10 sm:pl-4">
+                            <h3 class="text-start font-bold text-[85%]">Customizable Profile</h3>
+                            <p class="text-sm text-gray-500 w-48">Custom theme on your profile</p>
+                        </div>
+                    </div>
+                    <p class=" addoncost flex text-blue-700 text-base items-center">+$2/mo</p>
+                    
+                </div>
+            </div>
+            <div class="flex justify-between mt-36">
+                <button class="prev text-gray-500 font-bold text-lg rounded-md cursor-pointer" id="prev-step">Go Back</button>
+                <button class="next bg-blue-950 text-white px-4 py-2 rounded-md cursor-pointer" id="next-step">Next Step</button>
+            </div>
+
+            
+        </div>  
+
+
+
+
+<!-- step-4 -->
+
+
+
+<div class="step 4 mt-[-20%] relative hidden flex-col m-6 md:ml-[3rem] md:pl-0 md:pr-[2.1rem] text-start md:mt-[0] sm:z-40 bg-white pt-7 pl-7 rounded-lg">
+    <h1 class="font-bold text-2xl items-start">Finishing up</h1>
+    <p class="text-sm text-gray-500">Double-check everything looks OK before confirming</p>
+    <div class="mt-10 bg-gray-100 flex flex-col gap-y-1 text-center items w-full pr-5">
+        <div id="last" class="flex border-b-2 pl-7 pt-3 pb-3 gap-x-60 justify-between items-center text-start font-bold bg-gray-100">
+            <div>
+                <p class="text-sm" id="final">Arcade (Monthly)</p>
+                <button class="font-normal text-sm text-blue-700 cursor-pointer "><u>Change</u></button>
+            </div>
+            <p class="text-sm">$9/mo</p>
+        </div>
+        <div id="step4-addons" class="addons-list flex flex-col gap-y-7 py-5">           </div>
+        <div class="flex flex-col gap-y-7 py-5">
+            <div class="addon-item hidden text-gray-500 monthly flex pl-7 items-center justify-between h-3" id="addon-online-service">
+                <p class="text-sm">Online service</p>
+                <p class="text-sm">+$1/mo</p>
+            </div>
+            <div class="addon-item hidden text-gray-500 monthly flex pl-7 items-center justify-between h-3" id="addon-large-storage">
+                <p class="text-sm">Large storage</p>
+                <p class="text-sm">+$2/mo</p>
+            </div>
+            <div class="addon-item hidden text-gray-500 yearly flex pl-7 items-center justify-between h-3" id="addon-online-service-yearly">
+                <p class="text-sm">Online service</p>
+                <p class="text-sm">+$1/mo</p>
+            </div>
+            <div class="addon-item hidden text-gray-500 yearly flex pl-7 items-center justify-between h-3" id="addon-large-storage-yearly">
+                <p class="text-sm">Large storage</p>
+                <p class="text-sm">+$2/mo</p>
+            </div>
+        </div>
+        <div class="text-gray-500 flex pl-7 items-center justify-between h-3 py-10">
+            <p class="text-sm">Total (per month)</p>
+            <p class="text-blue-700 font-bold text-xl">+$12/mo</p>
+        </div>          
+    </div>
+    <div class="flex justify-between md:mt-28 mt-20 sticky">
+        <button class="prev text-gray-500 font-bold text-lg cursor-pointer">Go Back</button>
+        <button class="px-5 py-2 bg-blue-950 rounded text-white text-m" id="confirmbutton">Confirm</button>
+    </div>
+</div>
+
+
+
+
+<!-- step-5 -->
+
+        <div class="step 4 mt-[-20%] relative hidden flex flex-col justify-center items-center m-6 py-[9rem] md:py-0 md:px-[1.55rem] text-start  md:mt-[0] sm:z-40 bg-white md:pt-7 pl-7 rounded-lg">
+            <img src="icon-thank-you.svg" alt="Thank You Icon" class="mb-4">
+            <div class="flex flex-col gap-y-4 text-center">
+                <h1 class="text-2xl font-bold">Thank you!</h1>
+                <p class="text-base text-gray-500 flex flex-wrap">
+                    Thanks for confirming your subscription! We hope you have fun <br>using our platform. If you ever need support, please feel <br>free to email us at support@loremgaming.com.
+                </p>
+            </div>
+        </div>
+
+
+
+        
+</body>
+</html>
